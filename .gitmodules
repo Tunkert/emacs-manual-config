@@ -1,0 +1,9 @@
+[submodule "packages/magit"]
+	path = packages/magit
+	url = https://github.com/magit/magit.git
+[submodule "packages/transient"]
+	path = packages/transient
+	url = https://github.com/magit/transient.git
+[submodule "packages/with-editor"]
+	path = packages/with-editor
+	url = https://github.com/magit/with-editor.git

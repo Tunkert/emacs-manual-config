@@ -7,6 +7,11 @@
 (add-to-list 'load-path "~/.emacs.d/packages/php-mode/lisp") ;; php mode
 (add-to-list 'load-path "~/.emacs.d/packages/dashboard") ;; dashboard
 (add-to-list 'load-path "~/.emacs.d/packages/doom-modeline") ;; doom-modeline
+(add-to-list 'load-path "~/.emacs.d/packages/selectric-mode") ;; selectric mode
+(add-to-list 'load-path "~/.emacs.d/packages/magit/lisp") ;; magit 
+(add-to-list 'load-path "~/.emacs.d/packages/dash") ;; dash load path
+(add-to-list 'load-path "~/.emacs.d/packages/transient/lisp") ;; transient load path
+(add-to-list 'load-path "~/.emacs.d/packages/with-editor") ;; with editor load path
 
 ;; evil mode
 (require 'evil)
@@ -42,6 +47,14 @@
 (setq doom-modeline-minor-modes t)
 (setq doom-modeline-enable-word-count t)
 (display-time-mode)
+
+;; magit
+(add-to-list 'load-path "~/.emacs.d/site-lisp/magit/lisp")
+(require 'magit)
+(with-eval-after-load 'info
+  (info-initialize)
+  (add-to-list 'Info-directory-list
+               "~/.emacs.d/site-lisp/magit/Documentation/"))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
